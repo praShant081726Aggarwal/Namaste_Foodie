@@ -1,4 +1,40 @@
-#heading{
-    border: solid 2px red;
-    
+/* Header CSS */
+#header{
+    display: flex;
+    border: solid 2px blue;
+    justify-content: space-between;
+    font-size: large;
+}
+#logo-id{
+    width: 100px;
+}
+#Search{
+    padding: 10px;
+
+}
+#navBar ul{
+    display: flex;
+    list-style: none;
+}
+#navBar ul li{
+    padding: 10px;
+}
+
+/* Body CSS */
+#body{
+    margin: 10px ;
+}
+.resCard{
+    width: 300px;
+    border: solid 2px grey;
+    padding: 5px;
+    margin: 10px;
+}
+.resContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.resImg{
+    width: 100%;
 }

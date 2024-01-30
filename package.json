@@ -4,7 +4,10 @@
   "description": "Namaste Foodie(a food ordering app) is a React.Js project by Prashant Aggarwal",
 
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel index.html",
+    "build":"parcel build index.html"
+    
   },
   "repository": {
     "type": "git",
