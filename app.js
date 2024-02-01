@@ -38,23 +38,6 @@ const Body = () => {
           </div>
           <div className="resContainer" id="resContainer">
           <RestaurantCard resData = {restList[0]}/>
-          <RestaurantCard resData = {restList[1]}/>
-          <RestaurantCard resData = {restList[2]}/>
-          <RestaurantCard resData = {restList[3]}/>
-          <RestaurantCard resData = {restList[4]}/>
-          <RestaurantCard resData = {restList[5]}/>
-          <RestaurantCard resData = {restList[6]}/>
-          <RestaurantCard resData = {restList[7]}/>
-          <RestaurantCard resData = {restList[8]}/>
-          <RestaurantCard resData = {restList[10]}/>
-          <RestaurantCard resData = {restList[11]}/>
-          <RestaurantCard resData = {restList[12]}/>
-          <RestaurantCard resData = {restList[13]}/>
-          <RestaurantCard resData = {restList[14]}/>
-          <RestaurantCard resData = {restList[15]}/>
-          <RestaurantCard resData = {restList[16]}/>
-          <RestaurantCard resData = {restList[17]}/>
-          
           
           </div>
       </div>
