@@ -8,10 +8,7 @@
 #logo-id{
     width: 100px;
 }
-#Search{
-    padding: 10px;
 
-}
 #navBar ul{
     display: flex;
     list-style: none;
@@ -23,6 +20,10 @@
 /* Body CSS */
 #body{
     margin: 10px ;
+}
+#Search{
+    padding: 10px;
+
 }
 .resCard{
     width: 300px;
@@ -37,4 +38,8 @@
 }
 .resImg{
     width: 100%;
+}
+.filter-btn{
+    margin: 10px;
+    cursor: pointer;
 }
