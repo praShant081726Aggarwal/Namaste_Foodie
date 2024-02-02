@@ -1,72 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-/////////////Header
-const Header = () => {
-  return (
-    <div id="header" className="heading">
-      <img
-        src="https://logosandtypes.com/wp-content/uploads/2021/01/Swiggy.png"
-        id="logo-id"
-      ></img>
-      <NavBar />
-    </div>
-  );
-};
-
-//NavBar
-const NavBar = () => {
-  return (
-    <div id="navBar">
-      <ul>
-        <li>🛒</li>
-        <li>🔔</li>
-        <li>Profile</li>
-      </ul>
-    </div>
-  );
-};
-
-///// BODY
-//Body
-const Body = () => {
-    return (
-      <div className="body" id="body">
-          <div>
-          <Search />
-          </div>
-          <div className="resContainer" id="resContainer">
-          {
-            restList.map(restaurant => (
-            <RestaurantCard key={restaurant.info.id} resData={restaurant}/>))
-          }
-          
-          </div>
-      </div>
-    );
-  };
-
-//Search
-const Search = () => {
-    return <div id="Search">Search</div>;
-  };
-
-//Restaurant Card
-const RestaurantCard = (props)=>{
-    const {resData} = props;
-    const {name,cloudinaryImageId,avgRating,cuisines} = resData?.info;
-    return (
-        <div className="resCard" id="resCard">
-            <img className="resImg" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId}></img>
-            <h3>{name}</h3>
-            <h4>{avgRating}</h4>
-            <h4>{resData.info.sla.deliveryTime}</h4>
-            <h4>{cuisines.join(", ")}</h4>
-        </div>
-    )
-}
-
 // restList
 const restList =  [
     {
@@ -1691,15 +1622,4 @@ const restList =  [
     }
   ]
 
-
-
-///////AppLayout
-const AppLayout = () => {
-  return (
-    <div className="app">
-      <Header />
-      <Body />
-    </div>
-  );
-};
-root.render(<AppLayout />);
+export default restList;
