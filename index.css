@@ -6,7 +6,7 @@
     font-size: large;
 }
 #logo-id{
-    width: 100px;
+    width: 80px;
 }
 
 #navBar ul{
@@ -42,4 +42,17 @@
 .filter-btn{
     margin: 10px;
     cursor: pointer;
+}
+
+.shimmer_cards{
+    width: 300px;
+    height: 500px;
+    background-color:  #f0f0f0;
+    padding: 5px;
+    margin: 10px;
+}
+.shimmer_container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
