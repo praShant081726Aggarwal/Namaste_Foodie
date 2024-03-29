@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 // import restList from "../utils/storeData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 //Body
 const Body = () => {
   // State Variable
@@ -27,14 +28,6 @@ const Body = () => {
     );
   };
 
-  // if no restaurant found 
-  // if(FilteredListofRest==0){ 
-  //   return (
-  //     <div className="notFound">
-  //       <h1>Sorry! No such restaurant found</h1>
-  //     </div>
-  //   )
-  // }
 
   return ListofRestaurant.length == 0 ? (
     <Shimmer />
@@ -59,14 +52,16 @@ const Body = () => {
         >
           Search
         </button>
+
         <button  // top rated button
           className="filter-btn"
           onClick={() => {
             // filter logic
             const filteredList = ListofRestaurant.filter(
-              (res) => res.info.avgRatingString > 4.2
+              (res) => res.info.avgRatingString > 4.0
             );
-            setListofRestaurant(filteredList);
+            setFilteredListofRest(filteredList);
+            
           }}
         >
           Top Rated Restaurant
@@ -75,7 +70,7 @@ const Body = () => {
 
       <div className="resContainer" id="resContainer">
         {FilteredListofRest.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+          <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}><RestaurantCard  resData={restaurant} /></Link>
         ))}
       </div>
     </div>
